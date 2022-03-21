@@ -9,32 +9,32 @@ document.writeln(c_f_num);
 document.writeln(c_s_num);
 document.writeln(c_t_num);
 
-if(c_f_num/3 & c_f_num==0){
+if(c_f_num % 3 == 0){
      console.log("fizz");
-     document.writeln("fizz");
-}else if(c_f_num/5 & c_f_num==0){
+     result=document.writeln("fizz");
+}else if(c_f_num % 5 == 0){
     console.log("buzz");
     document.writeln("buzz");
 }
-else if (c_f_num/3 & c_f_num/5 & c_f_num==0) {
+else if (c_f_num %3 & c_f_num % 5 == 0) {
     console.log("fizz buzz");
     document.writeln("fizz buzz");
-} else if (c_s_num/3 & c_s_num==0) {
+} else if (c_s_num % 3 == 0) {
     console.log("fizz");
      document.writeln("fizz");
-} else if(c_s_num/5 & c_s_num==0){
+} else if(c_s_num % 5 == 0){
     console.log("buzz");
     document.writeln("buzz");
-}else if (c_s_num/3 & c_s_num/5 & c_s_num==0) {
+}else if (c_s_num % 3 & c_s_num % 5 == 0) {
     console.log("fizz buzz");
     document.writeln("fizz buzz");
-} else if(c_t_num/3 & c_t_num/5 & c_t_num==0) {
+} else if(c_t_num % 3 & c_t_num % 5  == 0) {
     console.log("fizz buzz");
     document.writeln("fizz buzz");
-}else if (c_t_num/3 & c_t_num==0) {
+}else if (c_t_num % 3 == 0) {
     console.log("fizz");
     document.writeln("fizz");
-} else if(c_t_num/5 & c_t_num==0){
+} else if(c_t_num % 5 == 0){
     console.log("buzz");
     document.writeln("buzz");
 }
