@@ -8,6 +8,7 @@ let result;
 switch(result){
     case "+":
      result=con_f_number+con_s_number;
+     document.getElementById()
     break;
     case"-":
     con_f_number-con_s_number;
