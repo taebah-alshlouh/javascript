@@ -179,3 +179,100 @@ function RemoveFromArray(nums3) {
 
 }
 
+//////the 14th task////////oddArray///////16//////////
+
+function oddArray(arr3) {
+  let i=0;
+  let num=arr3.indexOfArray;
+  while(num<length-1){
+    i++;
+    if(num % 2 == 0){
+    num.shift(arr3[i]);
+  }
+    else{
+      break;
+    }
+  }
+  return arr3;
+}
+let arr3=[1,2,3,8,9];
+console.log(oddArray(arr3));
+
+///////the 15th task//////////aveArray////////////17//////
+function aveArray(arr3) {
+  let total = 0;
+  for (let i = 0; i < arr3.length; i++) {
+      total += arr3[i];
+  }
+      console.log(Math.round(total/arr3.length));
+}
+
+aveArray(arr3);
+
+function aveArray1(arr3) {
+  let total = 0;
+  let i = 0;
+  while(i < arr3.length){
+    total += arr3[i];
+    i++;
+  }
+  console.log(Math.round(total/arr3.length));
+}
+aveArray1(arr3);
+
+/////////the 16th task//////////////shorterInArray//////////////18////////
+ function shorterInArray(strings) {
+  let tiny = strings[0];
+  for (let i = 0; i < strings.length; i++) {
+     const element = strings[i];
+         if( tiny.length > element.length){
+             tiny = element;
+             }
+                  }
+                 return tiny;
+                     }
+ 
+ let strings= ["alex","mercer","madrasa","rashed2","emad","hala"];
+ console.log(shorterInArray(strings));
+ function shorterInArray1(strings) {
+  let tiny = strings[0];
+  let i = 0;
+  while (i < strings.length) {
+    const element = strings[i];
+    i++;
+     if( tiny.length > element.length){
+      tiny = element;
+           }
+          return tiny;
+  }
+ }
+ console.log(shorterInArray(strings));
+
+ //////the 17th task///////////////////repeatChar//////////////19//////////
+
+ function repeatChar(params) {
+   
+ }
+ let string= "alex mercer madrasa rashed2 emad hala";
+ repeatChar(string,"a");
+
+ ////////the 18th task /////////////evenIndexOddLength/////////20//////////
+
+
+
+
+ 
+
+
+
+  ////////the 19th task /////////////powerElementIndex/////////21//////////
+
+
+
+
+
+
+
+////////the 20th task /////////////evenNumberEvenIndex/////////22//////////
+
+
