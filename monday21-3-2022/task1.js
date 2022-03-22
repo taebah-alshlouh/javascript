@@ -94,9 +94,82 @@ arrayExceptLast(nums);
 
 ////////////the 10th task///////////12////
 
-function  addToEnd(input) {
-        let re=nums1[index].push();
-        console.log(nums1);
+function  addToEnd(num) {
+      nums1.push(num); 
+      return nums1;   
 }
 let nums1=[1,2,3,8,9];
-console.log(addToEnd(nums1(55))); 
+console.log(addToEnd(5));
+console.log(addToEnd(11)); 
+
+/////////////the 11th task//////////13//////////
+
+let random = [1, 2, 3, 4];
+
+function SumArray(random) {
+  let sum = 0;
+for (let i = 0; i < random.length; i++) {
+    sum += random[i];
+}
+ return sum;
+}
+
+console.log(SumArray(random));
+
+
+function sumArray (random){
+  let i= 0;
+  let sum =0;
+  while (i< random.length) {
+    sum+=random[i];
+    i++;
+  }
+  return sum;
+}
+console.log(sumArray(random));
+
+/////////////////the 12th task//////////////14///////////////
+
+function minInArray(nums3) {
+  let smallestNum = nums3[0];
+  for (let i = 1; i < nums3.length; i++) {
+    if(nums3[i] < smallestNum) {
+      smallestNum = nums3[i];   
+    }
+  }
+  return smallestNum;
+}
+
+
+let nums3= [10,2,3,8,9];
+console.log(minInArray(nums3));
+
+
+function MinInArray(nums3) {
+  let i = 1;
+  let smallestNum = nums3[0];
+
+  while (i < nums3.length) {
+    if(nums3[i] < smallestNum){
+      smallestNum = nums3[i];
+      i++;
+    }
+    return smallestNum;
+  }
+}
+console.log(MinInArray(nums3));
+
+///////the 13th task//////removeFromArray//////15////////
+
+function removeFromArray(nums3) {
+
+  for (var i = 0, len = nums3.length; i < len; i++){
+    nums3[i].remove();
+    nums3[i].parentNode.removeChild(nums3[i]);
+    
+  }
+  return nums3;
+}
+console.log(nums3);
+console.log(removeFromArray(nums[3]));
+
