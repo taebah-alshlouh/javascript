@@ -163,13 +163,19 @@ console.log(MinInArray(nums3));
 
 function removeFromArray(nums3) {
 
-  for (var i = 0, len = nums3.length; i < len; i++){
+  for (let i = nums3.length-1; i >=0; i--){
     nums3[i].remove();
-    nums3[i].parentNode.removeChild(nums3[i]);
-    
   }
-  return nums3;
+ return nums3;
 }
 console.log(nums3);
-console.log(removeFromArray(nums[3]));
+console.log(removeFromArray(nums3[3],));
+
+function RemoveFromArray(nums3) {
+  let i = 0;
+  while (condition) {
+    
+  }
+
+}
 

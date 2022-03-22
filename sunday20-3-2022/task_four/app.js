@@ -1,40 +1,32 @@
 "use strickt"
-let f_num=prompt("enter the first number");
-let s_num=prompt("enter the secound number");
-let t_num=prompt("enter the third number");
-let c_f_num=Number(f_num);
-let c_s_num=Number(s_num);
-let c_t_num=Number(t_num);
-document.writeln(c_f_num);
-document.writeln(c_s_num);
-document.writeln(c_t_num);
+let num1 = parseInt(prompt('Enter the first number '));
+let num2 = parseInt(prompt('Enter the secound number '));
+let num3 = parseInt(prompt('Enter the third number '));
 
-if(c_f_num % 3 == 0){
-     console.log("fizz");
-     result=document.writeln("fizz");
-}else if(c_f_num % 5 == 0){
-    console.log("buzz");
-    document.writeln("buzz");
-}
-else if (c_f_num %3 & c_f_num % 5 == 0) {
-    console.log("fizz buzz");
-    document.writeln("fizz buzz");
-} else if (c_s_num % 3 == 0) {
+document.writeln(num1+"<br>");
+document.writeln(num2+"<br>");
+document.writeln(num3+"<br>");
+if((num1 % 3 ==0)|(num2 % 3 == 0)|(num3 % 3 ==0)){
     console.log("fizz");
-     document.writeln("fizz");
-} else if(c_s_num % 5 == 0){
-    console.log("buzz");
-    document.writeln("buzz");
-}else if (c_s_num % 3 & c_s_num % 5 == 0) {
-    console.log("fizz buzz");
-    document.writeln("fizz buzz");
-} else if(c_t_num % 3 & c_t_num % 5  == 0) {
-    console.log("fizz buzz");
-    document.writeln("fizz buzz");
-}else if (c_t_num % 3 == 0) {
-    console.log("fizz");
-    document.writeln("fizz");
-} else if(c_t_num % 5 == 0){
-    console.log("buzz");
-    document.writeln("buzz");
+    document.writeln("fizz"+"<br>");
+}else{
+    console.log("the numbers dont divided on 3");
+    document.writeln("the numbers dont divided on 3"+"<br>");
 }
+
+if ((num1 % 5 ==0)|(num2 % 5 == 0)|(num3 % 5 ==0)) {
+    console.log("buzz");
+    document.writeln("buzz"+"<br>");
+}else{
+    console.log("the numbers dont divided on 5");
+    document.writeln("the numbers dont divided on 5"+"<br>")
+
+}
+if (((num1 % 3 ==0)&(num1 % 5 ==0))|((num2 % 3 == 0)&(num2 % 5 == 0))|((num3 % 3 ==0)&(num3 % 5 ==0))) {
+    console.log("fizz buzz");
+    document.writeln("fizz buzz"+"<br>");
+}else{
+    console.log("the numbers dont divided on 3 and 5");
+    document.writeln("the numbers dont divided on 3 and 5")
+}
+
