@@ -7,5 +7,5 @@ function tellFortune(x,y,z,n) {
    console.log(tellFortune('software engineer', 'Jordan', 'Alice', 3)); 
 ///////task2//////////////////////
    function calculateDogAge (params) {
-       
+       console.log("");
    } 
