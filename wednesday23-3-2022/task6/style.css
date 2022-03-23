@@ -4,15 +4,28 @@ body{
     flex-direction: column;
     align-items: flex-start;
 }
-div{
+.div1{
     width: 50%;
     margin-left: 2%;
     border: 1px solid;
-    padding-left: 2%;
+    margin-bottom: 1%;
 }
-h1{
+.div2{
     margin-top: 0%;
     margin-left: 0%;
-    font-weight: 900;
+    padding-top: 2%;
+    padding-left: 2%;
+    height: 6vh;
     background-color: rgb(231, 231, 231);
+    font-size: 2vw;
+    font-weight: 700;
+}
+a{
+    font-size: medium;
+}
+p{
+    color: rgb(158, 158, 158);
+    padding: 2%;
+    font-size: 1.5vw;
+    font-weight: 500;
 }
