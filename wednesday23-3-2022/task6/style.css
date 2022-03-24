@@ -22,10 +22,17 @@ body{
 }
 a{
     font-size: medium;
+    padding: 1%;
 }
+
 p{
     color: rgb(158, 158, 158);
     padding: 2%;
     font-size: 1.5vw;
     font-weight: 500;
+    display: none;
+}
+#show1,#show2,#show3{
+margin-left: 10%;
+font-size: large;
 }
