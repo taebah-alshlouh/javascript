@@ -1,24 +1,27 @@
 "use strict"
 let f_input=prompt("Enter the operation (+ , - , * , /)");
-let num1 = parseInt(prompt('Enter the first number '));
-let num2 = parseInt(prompt('Enter the secound number '));
+let num1 = Number(prompt('Enter the first number '));
+let num2 = Number(prompt('Enter the secound number '));
 
-let result=0;
-switch(result){
-    case "+":
-    result= num1+num2;
-    console.log(result);
-    break;
-    case"-":
-    result= num1-num2;
-    console.log(result);
-    break;
-    case"*":
-    result= num1*num2;
-    console.log(result);
-    break;
-    case"/":
-    result= num1/num2;
-    console.log(result);
-    break;       
+switch(f_input){
+    case "+":{
+   let result= num1+num2;
+    console.log(result,"sum");
+    break;}
+
+    case"-":{
+    let result= num1-num2;
+    console.log(result,"subtract");
+    break;}
+
+    case"*":{
+   let result= num1*num2;
+    console.log(result,"multiplied");
+    break;}
+
+    case"/":{
+   let result= num1/num2;
+    console.log(result,"divide");
+    break;    }   
 }
+console.log();
