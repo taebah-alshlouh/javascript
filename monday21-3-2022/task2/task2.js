@@ -569,12 +569,10 @@ Ex: counter()
 */
 console.log("//////////////task 23///////////////");
 
-var coun=0;
+var num=0;
 function counter() {
-for (let index = 0; index < array.length; index++) {
-    return
-    
-}
+    num++;
+    return num;    
 }
 console.log(counter());
 console.log(counter());
@@ -613,8 +611,16 @@ Ex: resetCounter()
 Ex: counter()
 => 1
 */
-console.log("//////////////task 23///////////////");
+console.log("//////////////task 24///////////////");
 function resetCounter() {
+   if (num>0) {
+     console.log(`${num} and the counter reset now `);
+     return num=0;
+   }
     
 }
+console.log(counter());
 console.log(resetCounter());
+console.log(counter());
+
+
