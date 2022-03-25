@@ -24,3 +24,6 @@ console.log("Average grade: " + (Avgmarks)/students.length);
         } else if (avg < 100) {
                 console.log("Grade : A"); 
                             }
+
+                           
+ document.getElementById("p").innerHTML=(Avgmarks)/students.length;

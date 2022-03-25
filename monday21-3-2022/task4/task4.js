@@ -8,3 +8,4 @@ for (let i = 1; i <= n; i++) {////rows/////
   str += "\n";
 }
 console.log(str);
+document.write(`* <br> * * <br> * * * <br> * * * * <br> * * * * *`);
