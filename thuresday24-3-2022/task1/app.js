@@ -36,16 +36,17 @@ let persons= [
     { name: { first: 'Zues', last: 'Odin' }, age: 55 },
     { name: { first: 'Soso', last: 'Al-Amora' }, age: 67 }
   ];
-function firstName(n) {
+  
+function firstName(na) {
     let array=[];
-    for (let x = 0; n < array.length; x++) {
-        array.push(n[x].name.first);
+    for (let x = 0; x < na.length; x++) {
+        array.push(na[x].name.first);
         
     }
     return array;
 };
-console.log(firstName());
-document.getElementById("t2").innerHTML= persons().firstName;
+console.log(firstName(persons));
+document.getElementById("t2").innerHTML= firstName(persons);
 
 /*
 3
@@ -56,8 +57,23 @@ and return the average age of those persons
 
 Ex: averageAge(persons) => 41.2
 */
+console.log("task3");
+
+const averageAge = (arr = []) => {
+    const { sum, count } = arr.reduce((acc, val) => {
+       let { sum, count } = acc;
+       sum += val.age;
+       count++;
+       return { sum, count };
+       }, {
+          sum: 0, count: 0
+    });
+    return (sum / (count || 1));
+ };
+ console.log(averageAge(persons));
 
 
+document.getElementById("t3").innerHTML= averageAge(persons);
 /*
 4
 Using the varabile persons
@@ -67,15 +83,22 @@ and return the full name of the older person
 
 Ex: olderPerson(persons) => "Soso Al-Amora"
 */
- function olderPerson(na) {
-    let older=0;
-    for (let y = 0; index < array.length; y++) {
-        older= na[y];
-        
-    }
-}
+console.log("task4");
 
-/*
+function olderPerson(arr) {
+    let Age = arr[0].age;
+    let Older = 0;
+    for (let i = 1; i < arr.length; i++) {
+      if (Age < arr[i].age) {
+        Age = arr[i].age;
+        Older = i;
+      }
+    }
+    return `${arr[Older].name.first} ${arr[Older].name.last}`;
+  }
+  console.log(olderPerson(persons));
+  document.getElementById("t4").innerHTML= olderPerson(persons);
+  /*
 5
 Using the varabile persons
 Create a function called longestName
@@ -84,8 +107,21 @@ and return the full name of the person have longest full name
 
 Ex: longestName(persons) => "Soso Al-Amora"
 */
+console.log("task5");
 
-
+  function longestName(arr) {
+    let Name = arr[0].name.first.length + arr[0].name.last.length;
+    let indexLongestName = 0;
+    for (var i = 1; i < arr.length; i++) {
+      if (Name < arr[i].name.first.length + arr[i].name.last.length) {
+        Name = arr[i].name.first.length + arr[i].name.last.length;
+        indexLongestName = i;
+      }
+    }
+    return arr[indexLongestName].name.first + " " + arr[indexLongestName].name.last;
+  }
+  console.log(longestName(persons));
+  document.getElementById("t5").innerHTML= longestName(persons);
 /*
 6
 Using the varabile persons
@@ -95,7 +131,17 @@ and return the full name of the person have longest full name
 
 Ex: longestName(persons) => "Soso Al-Amora"
 */
+console.log("task6");
+function longestName(arr) {
+    
+}
 
+
+
+
+
+console.log(longestName(persons));
+document.getElementById("t5").innerHTML= longestName(persons);
 //////////////////////////////////////////////////////////////////
 
 /*
