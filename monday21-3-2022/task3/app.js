@@ -24,10 +24,10 @@ Ex: subtract(9); => 9 - 8 - 7 - 6 - 5 - 4 - 3 - 2 - 1 - 0 => -27
 */
 console.log("//////////////exercies 1//////////////");
 function subtract(n) {
-   while (n>=0) {
-       for (let index = n-1; index<=0; index--) {
-              var accu= n --;        
-       }return accu;
+   while (n>0) {
+       for (let index =0; index<= n; index++) {
+              var acc= n -index;        
+       }return acc;
    }
 }
 console.log(subtract(2));
@@ -55,6 +55,11 @@ function factorial(n) {
 console.log(factorial(2));
 console.log(factorial(4));
 
+for (let index = 1; index <= 0; index++) {
+    var fac =n*index;
+    console.log(index);
+}
+
 
 /*
 3
@@ -69,13 +74,13 @@ Ex: repeatStr("to",4); => "to to to to"
 */
 console.log("//////////////exercies 3//////////////");
 
-function repeatStr(str,numb) {
-    var i=0;
-    while (str!==0 && i==numb) {
-       i++; 
-    var re=str+str;
-      
-    }return re;
+function repeatStr(str,num) {
+    while (str!==0 && i==num) {
+       for (let x = 0; x == num; x++) {
+        var re=str+str;     
+       } 
+       return re;
+    }
 }
 console.log(repeatStr("to",2));
 console.log(repeatStr("to",4));
@@ -106,10 +111,12 @@ and return the first string number time
 Ex: repeatStr2("ro","cc"); => "ro ro"
 Ex: repeatStr2("ro","fff"); => "ro ro ro"
 */
-console.log("//////////////exercies 4//////////////");
+console.log("//////////////exercies 5//////////////");
 
-function repeatStr2(params) {
-    
+function repeatStr2(st1 ,st2) {
+    while (condition) {
+        
+    }
 }
 
 /*
@@ -123,7 +130,11 @@ Ex: multiOf(4,10,3); => 4000
 Ex: multiOf(6,3,2); => 54
 Ex: multiOf(6,2,3); => 48
 */
+console.log("//////////////exercies 6//////////////");
 
+function ultiOf(n1,n2,n3) {
+    
+}
 
 /*
 7
@@ -134,6 +145,7 @@ from the first number to the second number
 Ex: muti2(4, 5); => 4 * 5 => 20
 Ex: muti2(3, 6); => 3 * 4 * 5 * 6 => 360
 */
+console.log("//////////////exercies 7//////////////");
 
 
 /*
@@ -147,6 +159,7 @@ and return the number between them
 numberBetweenUs(2,8) => "3, 4, 5, 6, 7"
 numberBetweenUs(1,3) => "2"
 */
+console.log("//////////////exercies 8//////////////");
 
 
 /*
@@ -166,6 +179,7 @@ countDown(2)
 countDown(7)
 => "7, 6, 5, 4, 3, 2, 1, done"
 */
+console.log("//////////////exercies 9//////////////");
 
 /*
 10
@@ -177,6 +191,7 @@ multiplication2(5,4) => 20
 multiplication2(2,8) => 16
 multiplication2(7,6) =>  42
 */
+console.log("//////////////exercies 10//////////////");
 
 /*
 11
@@ -189,6 +204,7 @@ mod2(2,8) => 2
 mod2(7,4) => 3
 mod2(8,4) => 0
 */
+console.log("//////////////exercies 11//////////////");
 
 
 /*
@@ -206,7 +222,7 @@ repeatChar("School","s") => 1
 try more case by yourself
 */
 
-
+console.log("//////////////exercies 12//////////////");
 
 
 
