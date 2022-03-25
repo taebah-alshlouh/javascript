@@ -531,36 +531,21 @@ Ex: scoreInUniversty(71)
 console.log("//////////////task 22///////////////");
 
 function scoreInUniversty(grade) {
-    if (grade <= 100 || grade >= 95) {
+    if (grade == 100 || grade >= 95) {
         return "A";
-    }else if (grade <= 94 || grade >= 85) {
+    }else if (grade == 94 || grade >= 85) {
         return "B";
-    }else if(grade <= 84 || grade >=70){
+    }else if(grade == 84 || grade >=70){
         return "C";
-    }else if (grade <= 69 || grade >=50) {
+    }else if (grade == 69 || grade >=50) {
         return "D";
-    }else if(grade <= 49 || grade >=0){
+    }else if(grade == 49 || grade >=0){
         return "F";
     }else{
         return "it is not in the range";
     }
 }
 
-
-if (grade < 60){
-    console.log("Grade : F");      
-    } 
-  else if (grade < 70) {
-          console.log("Grade : D"); 
-            } 
-  else if (grade < 80) 
-       {
-          console.log("Grade : C"); 
-  } else if (grade < 90) {
-          console.log("Grade : B"); 
-  } else if (grade < 100) {
-          console.log("Grade : A"); 
-                      }
 console.log(scoreInUniversty(96));
 console.log(scoreInUniversty(3));
 console.log(scoreInUniversty(71));
@@ -582,6 +567,19 @@ Ex: counter()
 => 3
 
 */
+console.log("//////////////task 23///////////////");
+
+var coun=0;
+function counter() {
+for (let index = 0; index < array.length; index++) {
+    return
+    
+}
+}
+console.log(counter());
+console.log(counter());
+console.log(counter());
+
 
 
 /*
@@ -615,3 +613,8 @@ Ex: resetCounter()
 Ex: counter()
 => 1
 */
+console.log("//////////////task 23///////////////");
+function resetCounter() {
+    
+}
+console.log(resetCounter());
