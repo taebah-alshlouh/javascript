@@ -24,8 +24,15 @@ Ex: subtract(9); => 9 - 8 - 7 - 6 - 5 - 4 - 3 - 2 - 1 - 0 => -27
 */
 console.log("//////////////exercies 1//////////////");
 function subtract(n) {
-    
+   while (n>=0) {
+       for (let index = n-1; index<=0; index--) {
+              var accu= n --;        
+       }return accu;
+   }
 }
+console.log(subtract(2));
+console.log(subtract(5));
+console.log(subtract(9));
 
 /*
 2
@@ -35,6 +42,18 @@ and return the product of all integers up to n starting from 1
 Ex: factorial(2); => 2 * 1 => 2
 Ex: factorial(4); => 4 * 3 * 2 * 1 => 24
 */
+console.log("//////////////exercies 2//////////////");
+ 
+function factorial(n) {
+    while (n<=fac) {
+        for (let index = 1; index < n; index++) {
+            var fac =n*index;
+            console.log(index);
+        }
+    }return fac;
+}
+console.log(factorial(2));
+console.log(factorial(4));
 
 
 /*
@@ -48,7 +67,18 @@ Important: the continue condition should be [somthing !== 0]
 Ex: repeatStr("to",2); => "to to"
 Ex: repeatStr("to",4); => "to to to to"
 */
+console.log("//////////////exercies 3//////////////");
 
+function repeatStr(str,numb) {
+    var i=0;
+    while (str!==0 && i==numb) {
+       i++; 
+    var re=str+str;
+      
+    }return re;
+}
+console.log(repeatStr("to",2));
+console.log(repeatStr("to",4));
 
 /*
 4
@@ -58,8 +88,13 @@ and will return the sumation from the first number to the second number
 Ex: sum2(4, 5); => 4 + 5 => 9
 Ex: sum2(3, 6); => 3 + 4 + 5 + 6 => 18
 */
+console.log("//////////////exercies 4//////////////");
 
-
+function sum2(n1,n2) {
+    while (condition) {
+        
+    }
+}
 /*
 5
 Create a function called repeatStr2
@@ -71,7 +106,11 @@ and return the first string number time
 Ex: repeatStr2("ro","cc"); => "ro ro"
 Ex: repeatStr2("ro","fff"); => "ro ro ro"
 */
+console.log("//////////////exercies 4//////////////");
 
+function repeatStr2(params) {
+    
+}
 
 /*
 6
