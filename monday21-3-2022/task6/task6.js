@@ -16,8 +16,21 @@ console.log("foreach");
 */
 console.log("//////////////Exercise 1://////////////////");
 function doubleValues(arr){
-   //Your Code Here
+
+  var newArr= [];
+
+  arr.forEach(function(val){
+
+      newArr.push(val * 2);
+
+  })
+
+  return newArr;
+
 }
+console.log(doubleValues([1,2,3]) );
+console.log(doubleValues([10,2,4,6,20]) );
+
 
 /*
 * Exercise 2:
@@ -34,9 +47,25 @@ function doubleValues(arr){
 console.log("//////////////Exercise 2://////////////////");
 
 function onlyEvenValues(arr){
-    //Your Code Here
-    
+
+  var newArr= [];
+
+  arr.forEach(function(val){
+
+      if(val % 2 === 0){
+
+       newArr.push(val);
+
+      }
+
+  })
+
+   return newArr;
+
 }
+console.log(onlyEvenValues([1,2,3]));
+console.log(onlyEvenValues([5,1,2,3,10]));
+
 
 /*
 * Exercise 3:
@@ -52,10 +81,19 @@ function onlyEvenValues(arr){
 *
 */
 console.log("//////////////Exercise 3://////////////////");
-
 function showFirstAndLast(arr){
-   //Your Code Here
+
+  var newArr= [];
+
+  arr.forEach(function(val){ 
+            newArr.push(val[0] + val[val.length-1])
+            
+      });    return newArr;                                        
+
 }
+console.log(showFirstAndLast(['colt','matt', 'tim', 'udemy']));
+console.log(showFirstAndLast(['hi', 'goodbye', 'smile']));
+
 
 /*
 * Exercise 4:
@@ -72,8 +110,16 @@ function showFirstAndLast(arr){
 console.log("//////////////Exercise 4://////////////////");
 
 function addKeyAndValue(arr,key,value){
-    //Your Code Here
-}
+  arr.forEach(function(val){
+
+    val[key] = value;
+    
+    });
+    
+    return arr;
+    
+    }
+console.log(addKeyAndValue([{name: 'Elie'}, {name: 'Tim'}, {name: 'Matt'}, {name: 'Colt'}], 'title', 'instructor'));
 
 /*
 * Exercise 5:
@@ -98,6 +144,35 @@ function addKeyAndValue(arr,key,value){
 console.log("//////////////Exercise 5://////////////////");
 
 
-function vowelCount(str){
-  //Your Code Here
+function vowelCount(str){  
+  var splitArr = str.split("");
+
+  var obj = {};
+  
+  var vowels= "aeiou";
+
+  splitArr.forEach(function(letter){
+
+    if(vowels.indexOf(letter.toLowerCase()) !== -1){
+    
+    if(letter in obj){
+    
+    obj[letter]++
+    
+    } else {
+    
+    obj[letter] = 1;
+    
+    }
+
+    }
+    
+    });
+    return obj;
+
 }
+console.log(vowelCount('Elie'));
+console.log(vowelCount('Tim'));
+console.log(vowelCount('Matt'));
+console.log(vowelCount('hmmm'));
+console.log(vowelCount('I Am awesome and so are you'));
