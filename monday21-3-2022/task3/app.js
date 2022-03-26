@@ -75,17 +75,17 @@ Ex: repeatStr("to",4); => "to to to to"
 */
 console.log("//////////////exercies 3//////////////");
 
-function repeatStr(str,num) {
-    var array = [];
-    var i=0;
-    while (i<num) {
-    str[i++] = str;
-}
-return str.join('');
+// // // function repeatStr(str,num) {
+// // //     var array = [];
+// // //     var i=0;
+// // //     while (i<num) {
+// // //     str[i++] = str;
+// // // }
+// // // return str.join('');
 
-}
-console.log(repeatStr("to",2));
-console.log(repeatStr("to",4));
+// // }
+// console.log(repeatStr("to",2));
+// console.log(repeatStr("to",4));
 
 /*
 4
