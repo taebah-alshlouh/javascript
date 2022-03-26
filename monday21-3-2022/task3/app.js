@@ -11,7 +11,7 @@
 // And don’t look or use a code that you wrote before 
 
 console.log('Here is : While')
-
+document.getElementById("p").innerHTML="Here is : While";
 /*
 1
 Create a function called subtract
@@ -23,12 +23,15 @@ Ex: subtract(5); => 5 - 4 - 3 - 2 - 1 - 0 => -5
 Ex: subtract(9); => 9 - 8 - 7 - 6 - 5 - 4 - 3 - 2 - 1 - 0 => -27
 */
 console.log("//////////////exercies 1//////////////");
-function subtract(n) {
-   while (n>0) {
-       for (let index =0; index<= n; index++) {
-              var acc= n -index;        
-       }return acc;
-   }
+function subtract(num) {
+    var result = num;
+    if (num === 0 || num === 1) 
+    return 1; 
+    while (num > 1) { 
+    num--; 
+    result = result - num; 
+    }
+    return result;
 }
 console.log(subtract(2));
 console.log(subtract(5));
@@ -45,20 +48,18 @@ Ex: factorial(4); => 4 * 3 * 2 * 1 => 24
 console.log("//////////////exercies 2//////////////");
  
 function factorial(n) {
-    while (n<=fac) {
-        for (let index = 1; index < n; index++) {
-            var fac =n*index;
-            console.log(index);
-        }
-    }return fac;
+var result = n;
+if (n === 0 || n === 1) 
+return 1; 
+while (n > 1) { 
+n--; 
+result = result * n; 
+}
+return result;
 }
 console.log(factorial(2));
 console.log(factorial(4));
-
-for (let index = 1; index <= 0; index++) {
-    var fac =n*index;
-    console.log(index);
-}
+   
 
 
 /*
@@ -75,12 +76,13 @@ Ex: repeatStr("to",4); => "to to to to"
 console.log("//////////////exercies 3//////////////");
 
 function repeatStr(str,num) {
-    while (str!==0 && i==num) {
-       for (let x = 0; x == num; x++) {
-        var re=str+str;     
-       } 
-       return re;
-    }
+    var array = [];
+    var i=0;
+    while (i<num) {
+    str[i++] = str;
+}
+return str.join('');
+
 }
 console.log(repeatStr("to",2));
 console.log(repeatStr("to",4));
@@ -96,10 +98,16 @@ Ex: sum2(3, 6); => 3 + 4 + 5 + 6 => 18
 console.log("//////////////exercies 4//////////////");
 
 function sum2(n1,n2) {
-    while (condition) {
-        
-    }
+    let sum=0;
+    while (n2==0) {
+        for (let index =n1 ;index==n2 ; index++) {
+            
+        }
+    }return sum;
 }
+console.log(sum2(4, 5));
+console.log(sum2(3, 6));
+
 /*
 5
 Create a function called repeatStr2
@@ -160,6 +168,18 @@ numberBetweenUs(2,8) => "3, 4, 5, 6, 7"
 numberBetweenUs(1,3) => "2"
 */
 console.log("//////////////exercies 8//////////////");
+function numberBetweenUs(n1,n2) {
+
+    var arr = [];
+    var i=n1+1;
+    while (i<=n2-1) {
+        arr.push(`${i}`);
+        i++;
+    }
+   return arr;
+}
+console.log(numberBetweenUs(2,8));
+console.log(numberBetweenUs(1,3));
 
 
 /*
@@ -181,6 +201,10 @@ countDown(7)
 */
 console.log("//////////////exercies 9//////////////");
 
+
+function countDown(params) {
+    
+}
 /*
 10
 Write a function called multiplication2
@@ -224,8 +248,12 @@ try more case by yourself
 
 console.log("//////////////exercies 12//////////////");
 
+function repeatChar(str,char) {
+ 
+}
 
-
+console.log(repeatChar("schOol","o"));
+console.log(repeatChar("schOol","o"));
 
 
 
