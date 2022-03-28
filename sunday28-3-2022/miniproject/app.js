@@ -7,7 +7,6 @@
 // show "used" and should store data in local storage when I refresh the page still show the data I store it before.
 
 let mobForm = document.getElementById("mobForm");
-let thElemen = document.getElementById("headTa");
 let tbElement=document.getElementById("boadTa");
 
 let order_phone = [];
@@ -27,18 +26,14 @@ function Order(useName, typeNameD) {
   this.price= price(50,500);
 
   order_phone.push(this);
-
   render();
-
   storeInLocalStorage( );
-  
   console.log(order_phone);
 }
 
 
 function price(min,max){
     return  Math.ceil(Math.random() * (max - min) + min);
-  
 }
 
 
@@ -63,13 +58,15 @@ function handleSubmit(event) {
 
 
 function render() {
-    let trElement = document.createElement("tr");
-    let tdElement4 = document.createElement("td");
-    let tdElement1 = document.createElement("td");
-    let tdElement2 = document.createElement("td");
-    let tdElement3 = document.createElement("td");
-  
+     
+    tbElement.textContent="";
     for (let i = 0; i < order_phone.length; i++) {
+        let trElement = document.createElement("tr");
+        let tdElement4 = document.createElement("td");
+        let tdElement1 = document.createElement("td");
+        let tdElement2 = document.createElement("td");
+        let tdElement3 = document.createElement("td");
+
       tbElement.appendChild(trElement);
       trElement.appendChild(tdElement4);
       trElement.appendChild(tdElement1);
