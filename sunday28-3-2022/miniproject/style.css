@@ -4,7 +4,8 @@
 
 
 .contaner{
-    display: flex;
+    width: 60%;
+    margin-left: 5%;
 }
 
 

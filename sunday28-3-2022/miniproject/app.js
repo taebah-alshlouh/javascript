@@ -8,17 +8,15 @@
 
 let mobForm = document.getElementById("mobForm");
 let thElemen = document.getElementById("headTa");
-let tableBody=document.getElementById("boadTa");
+let tbElement=document.getElementById("boadTa");
 
 let order_phone = [];
-
-
 
 function Order(useName, typeNameD) {
   this.useName = useName;
   this.typeNameD = typeNameD;
-  this.price = price(50,500);
-
+  this.price= mobile_price(50,500);
+  this.condition=conditon();
   order_phone.push(this);
   render();
   storeInLocalStorage( );
@@ -26,14 +24,15 @@ function Order(useName, typeNameD) {
 }
 
 
-function price(min,max){
-   let pr= Math.ceil(Math.random() * (max - min) + min);
-    return pr;
+function mobile_price(min,max){
+    return  Math.ceil(Math.random() * (max - min) + min);
+
 }
 
 
-function divice_condition() {
-    if (Order.price < 100){
+function condition() {
+    let price=phone.price;
+    if (price < 100){
         return "used";
     }else {
         return "new Device";
@@ -47,33 +46,32 @@ function handleSubmit(event) {
   event.preventDefault();
   let useName = event.target.useName.value;
   let typeNameD = event.target.typeNameD.value;
-  
+ 
   new Order(useName, typeNameD);
 }
 
 
 function render() {
-    let t_row = document.createElement("tr")
-    let td1 = document.createElement("td");
-    let td2  = document.createElement("td");
-    let td3 = document.createElement("td");
-    let td4  = document.createElement("td");
+    let trElement = document.createElement("tr");
+    let tdElement4 = document.createElement("td");
+    let tdElement1 = document.createElement("td");
+    let tdElement2 = document.createElement("td");
+    let tdElement3 = document.createElement("td");
   
-      for (let i = 0; i < order_phone.length; i++) {
-        tableBody.appendChild(t_row);
-        t_row.appendChild(td1);
-        t_row.appendChild(td2);
-        t_row.appendChild(td3);
-        t_row.appendChild(td4);
-
-        td1.textContent = order_phone[i].userName;
-        td2.textContent = order_phone[i].typeNameD;
-        td3.textContent = order_phone[i].price;
-        td4.textContent = order_phone[i].divice_condition;
-                            }
+    for (let i = 0; i < order_phone.length; i++) {
+      tbElement.appendChild(trElement);
+      trElement.appendChild(tdElement4);
+      trElement.appendChild(tdElement1);
+      trElement.appendChild(tdElement2);
+      trElement.appendChild(tdElement3);
   
-    }    
-
+      tdElement4.textContent = order_phone[i].useName;
+      tdElement1.textContent = order_phone[i].typeNameD;
+      tdElement2.textContent = order_phone[i].price;
+      tdElement3.textContent = order_phone[i].condition;
+    }
+}    
+handleSubmit();
 
     function storeInLocalStorage ( ){
         let stringArray=JSON.stringify(order_phone);
