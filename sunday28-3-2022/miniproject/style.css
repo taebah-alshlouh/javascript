@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+}
+
+
+.contaner{
+    display: flex;
+}
+
+
+.divTable{
+    margin-top: 1%;
+    border: 3px dashed darkblue;
+    width: 50%;
+}
+#tableCon{
+    font-size: larger;
+    color: darkcyan;
+}
+#headTa{
+    padding: 1%;
+}
