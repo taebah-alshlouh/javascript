@@ -15,8 +15,8 @@ let order_phone = [];
 function Order(useName, typeNameD) {
   this.useName = useName;
   this.typeNameD = typeNameD;
-  this.price= mobile_price(50,500);
-  this.condition=conditon();
+  this.price= price(50,500);
+
   order_phone.push(this);
   render();
   storeInLocalStorage( );
@@ -24,15 +24,14 @@ function Order(useName, typeNameD) {
 }
 
 
-function mobile_price(min,max){
+function price(min,max){
     return  Math.ceil(Math.random() * (max - min) + min);
-
+  
 }
 
 
 function condition() {
-    let price=phone.price;
-    if (price < 100){
+    if (Order.price < 100){
         return "used";
     }else {
         return "new Device";
