@@ -75,17 +75,17 @@ Ex: repeatStr("to",4); => "to to to to"
 */
 console.log("//////////////exercies 3//////////////");
 
-// // // function repeatStr(str,num) {
-// // //     var array = [];
-// // //     var i=0;
-// // //     while (i<num) {
-// // //     str[i++] = str;
-// // // }
-// // // return str.join('');
-
-// // }
-// console.log(repeatStr("to",2));
-// console.log(repeatStr("to",4));
+function repeatStr(str,num) {
+    let concat= str;
+    let i= 1;
+    while(num-i !== 0){
+    concat+= ' '+str;
+    i++;
+    }
+    return concat;
+}
+console.log(repeatStr("to",2));
+console.log(repeatStr("to",4));
 
 /*
 4
@@ -98,12 +98,13 @@ Ex: sum2(3, 6); => 3 + 4 + 5 + 6 => 18
 console.log("//////////////exercies 4//////////////");
 
 function sum2(n1,n2) {
-    let sum=0;
-    while (n2==0) {
-        for (let index =n1 ;index==n2 ; index++) {
-            
-        }
-    }return sum;
+    let sum= n1;
+    let i= n1+1;
+    while(i != n2+1){
+        sum+= i;
+        i++;
+    }
+    return sum;
 }
 console.log(sum2(4, 5));
 console.log(sum2(3, 6));
@@ -122,10 +123,20 @@ Ex: repeatStr2("ro","fff"); => "ro ro ro"
 console.log("//////////////exercies 5//////////////");
 
 function repeatStr2(st1 ,st2) {
-    while (condition) {
-        
+    let concat= st1;
+    let i= 1;
+    let num= st2.length;
+    while(num-i !== 0){
+    concat+= ' '+st1;
+    i++;
     }
+    return concat;
 }
+console.log(repeatStr2("ro","cc"));
+console.log(repeatStr2("ro","fff"));
+console.log(repeatStr2("roof","top"));
+
+
 
 /*
 6
@@ -140,9 +151,13 @@ Ex: multiOf(6,2,3); => 48
 */
 console.log("//////////////exercies 6//////////////");
 
-function ultiOf(n1,n2,n3) {
-    
+function multiOf(n1,n2,n3) {
+     return n1* (Math.pow(n2,n3));
+
 }
+console.log(multiOf(4,10,3));
+console.log(multiOf(6,3,2));
+console.log(multiOf(6,2,3));
 
 /*
 7
@@ -154,7 +169,18 @@ Ex: muti2(4, 5); => 4 * 5 => 20
 Ex: muti2(3, 6); => 3 * 4 * 5 * 6 => 360
 */
 console.log("//////////////exercies 7//////////////");
-
+function muti2(par1,par2) {
+    let mul= par1;
+    let i= par1+1;
+    while(i != par2+1){
+        mul*= i;
+        i++;
+    }
+    return mul;
+}
+console.log(muti2(4, 5));
+console.log(muti2(3, 6));
+console.log(muti2(2, 8));
 
 /*
 8
@@ -176,7 +202,7 @@ function numberBetweenUs(n1,n2) {
         arr.push(`${i}`);
         i++;
     }
-   return arr;
+   return `${arr}`;
 }
 console.log(numberBetweenUs(2,8));
 console.log(numberBetweenUs(1,3));
@@ -201,10 +227,19 @@ countDown(7)
 */
 console.log("//////////////exercies 9//////////////");
 
-
-function countDown(params) {
-    
+function countDown(para1) {
+   let arra=[];
+   let countd=para1;
+    while (countd>0) {
+       arra.push(countd);
+       countd--;
+    }       
+    return `${arra}`;
 }
+console.log(countDown(5));
+console.log(countDown(2));
+console.log(countDown(7));
+
 /*
 10
 Write a function called multiplication2
@@ -216,6 +251,17 @@ multiplication2(2,8) => 16
 multiplication2(7,6) =>  42
 */
 console.log("//////////////exercies 10//////////////");
+
+function multiplication2(par1,par2) {
+    let sum=0;
+    while (par2) {
+       sum= sum+par1;
+       par2--;
+    }return sum;
+}
+console.log(multiplication2(5,4));
+console.log(multiplication2(2,8));
+console.log(multiplication2(7,6));
 
 /*
 11
@@ -230,6 +276,17 @@ mod2(8,4) => 0
 */
 console.log("//////////////exercies 11//////////////");
 
+function mod2(pa1,pa2) {
+
+    while (pa1 >= pa2)
+        pa1 -= pa2;
+       return pa1;
+
+}
+console.log(mod2(5,4));
+console.log(mod2(2,8));
+console.log(mod2(7,4));
+console.log(mod2(8,4));
 
 /*
 12
@@ -249,11 +306,26 @@ try more case by yourself
 console.log("//////////////exercies 12//////////////");
 
 function repeatChar(str,char) {
- 
+    let x=0;
+    let sum=0;
+    let newstr=str.toLowerCase();
+    let str_length=str.length;
+    while(str_length>0){
+        if(newstr[x]==char){
+            sum=sum+1;
+        }
+        x++;
+        str_length--;
+    }
+    return sum;
 }
 
 console.log(repeatChar("schOol","o"));
 console.log(repeatChar("schOol","o"));
+console.log(repeatChar("school","a"));
+console.log(repeatChar("School","s"));
+console.log(repeatChar("runnn","n"));
+
 
 
 
