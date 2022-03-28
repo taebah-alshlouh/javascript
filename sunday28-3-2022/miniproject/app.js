@@ -12,14 +12,26 @@ let tbElement=document.getElementById("boadTa");
 
 let order_phone = [];
 
+
+function storeInLocalStorage ( ){
+    let stringArray=JSON.stringify(order_phone);
+    localStorage.setItem("data",stringArray);
+}
+
+callFromLocalStorage()
+
+
 function Order(useName, typeNameD) {
   this.useName = useName;
   this.typeNameD = typeNameD;
   this.price= price(50,500);
 
   order_phone.push(this);
+
   render();
+
   storeInLocalStorage( );
+  
   console.log(order_phone);
 }
 
@@ -72,18 +84,12 @@ function render() {
 }    
 handleSubmit();
 
-    function storeInLocalStorage ( ){
-        let stringArray=JSON.stringify(order_phone);
-        localStorage.setItem("data",stringArray);
-    }
 
-
-    function callFromLocalStorage(){
+function callFromLocalStorage(){
         let dataObj=localStorage.getItem("data");
     
         let strbject=JSON.parse(dataObj);
         if(strbject != null){
             order_phone=strbject;
         }
-        render( ); 
     }
