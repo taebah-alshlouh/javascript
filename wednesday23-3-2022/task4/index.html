@@ -4,9 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Exercise #4: Formatting text</title>
 </head>
 <body>
-    
+    <div>
+   <form action="" name="textEditor">
+       <select name="font" id="fontFa" onchange="fontFamily()">
+           <option value="Courier New">Courier New</option>
+           <option value="Lucida Sans">Lucida Sans</option>
+           <option value="Arial">Arial</option>
+       </select>
+       <select name="fontSi" id="fS" onchange="fontSize()">
+        <option value="12px">12pt</option>
+        <option value="18px">18pt</option>
+        <option value="22px">22pt</option>
+    </select>
+    <label for="italic">Italic</label> <input type="checkbox" name="italic" id="Italic" onchange="fStyle()">
+    <label for="bold">Bold</label><input type="checkbox"name="bold" id="Bold" onchange="fWeight()">
+    <label for="underline">Underline</label><input type="checkbox"name="underline" id="Underline" onchange="tDecoration()">
+
+   <textarea name="text" id="textar" cols="100" rows="7"></textarea>  
+   </form> 
+</div>
 </body>
+<script src="app.js"></script>
 </html>

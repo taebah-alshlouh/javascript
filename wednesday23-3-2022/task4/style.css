@@ -1,0 +1,44 @@
+body{
+    box-sizing: border-box;
+    margin: 2%;
+    padding: 0%;
+    font-family: Helvetica, sans-serif;
+    background-color: aliceblue;
+    background-image: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm200-nunoon-29.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=a80b8a04260653451592d1cc84342cfd");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+div{
+    background-color: rgba(0, 0, 0, 0.315);
+    color: white;
+    display: flex;
+    width: 50VW;
+    height: 40VH;
+    margin-top: 10%;
+    margin-left: 20%;
+    border: 1px solid rgba(0, 0, 0, 0.062);
+    border-radius: 10%;
+}
+form{
+    flex-direction:column;
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 90;
+    height: 80%;
+}
+input{
+    color: palevioletred;
+    margin: 1%;
+}
+textarea{
+    width: 50%;
+    margin-top: 1%;
+    color: palevioletred;
+}
+option{
+    color: white;
+    background-color: dimgrey;
+}
+  
+  
