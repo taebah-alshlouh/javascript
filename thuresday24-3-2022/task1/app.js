@@ -166,9 +166,22 @@ Ex: repeatWord("My name is alex mercer class name B baba mama hello Hello HELLO"
   hello:3
 }
 */
-
+console.log("//////////task 7////////////");
 function repeatWord(str) {
-    
+    let substr=str.toLowerCase().split(' ');
+    let obj={};
+    let count;
+    for (let index = 0; index < str.length; index++) {
+       let objindex=obj[substr[index]];
+       if(objindex){
+         count=objindex;
+       }
+       else{
+         count=0;
+       }
+       obj[substr[index]]=count+1
+    }
+    return obj;
 }
 
 
@@ -183,7 +196,9 @@ and return an object that represents how many times each char repeat
 Ex: repeatChar("mamababatetacedo")
 => { m:2,  a:5, b:2, t2:, e:2, c:1, d:1, o:1}
 */
-
+function repeatChar(str) {
+  
+}
 
 /*
 9
@@ -194,7 +209,19 @@ and return an object have the key that inside the array
 Ex: selectFromObject({a: 1, cat: 3}, ['a', 'cat', 'd'])
 =>  {a: 1, cat: 3}
 */
-
+function selectFromObject(x,y){
+  let obj = {}
+      for(let i =0 ; i<y.length ; i++)
+      {
+          if(Object.keys(x)[i]==y[i])
+          {
+              console.log(x[y[i]]);
+              obj[y[i]] = x[y[i]];
+          }
+      }
+  return obj;
+  }
+  console.log(selectFromObject({a: 1, cat: 3 }, ['a', 'cat', 'd']));
 
 /*
 10
@@ -205,7 +232,9 @@ and return an array of the keys and values in this object
 Ex: objectToArray({firstName:"Moh",age:24})
 => ["firstName","Moh","age",24]
 */
-
+function objectToArray(obj) {
+  
+}
 
 /*
 11
@@ -216,8 +245,17 @@ and return an object of the keys and values in this object
 Ex: arrayToObject(["firstName","Moh","age",24])
 => {firstName:"Moh",age:24}
 */
+function arrayToObject(x)
+{
+     let newobj = {};
+     for(let i=0 ; i<x.length; i+=2)
+     {
+         newobj[x[i]] = x[i+1];      
+     }
+     return newobj;
+}
 
-
+console.log(arrayToObject(["firstName","Moh","age",24]));
 /*
 12
 Create a function called onlyNumber
@@ -228,7 +266,15 @@ and return a new object that have only the values that is a number
 Ex: onlyNumber({firstName:"Moh",age:24,movies:[1,5,"string"]})
 => {age:24}
 */
-
+function onlyNumber(num) {
+  let numobj={};
+  for (let index = 0; index < Object.keys(num).length; index++) {
+    if(typeof(Object.values[i]) == "it's number"){
+      console.log();
+    }
+    
+  }
+}
 
 /*
 13
@@ -240,6 +286,16 @@ and return a new object that have only the values that is a string
 Ex: onlyString({firstName:"Moh",age:24,movies:[1,5,"string"]})
 => {firstName:"Moh"}
 */
+function onlyString(obj) {
+  let newObj={};
+  for (let i = 0; i < Object.keys(obj).length; i++) {
+    if (typeof(Object.values(obj)[i]) == `string`) {
+      newObj[Object.keys(obj)[i]] = Object.values(obj)[i];
+    }
+  } return newObj;
+}
+console.log(onlyString({firstName:"Moh",age:24,movies:[1,5,"string"], he:`ibra`,she:`sara`}));
+document.write(onlyString({firstName:"Moh",age:24,movies:[1,5,"string"], he:`ibra`,she:`sara`}));
 
 
 /*
@@ -252,8 +308,21 @@ and return a new object that have only the values that is a array
 Ex: onlyArray({firstName:"Moh",age:24,movies:[1,5,"string"]})
 => {movies:[1,5,"string"]}
 */
+function onlyArray(obj) {
+  let numobj={};
+  for(let i=0;i< Object.keys(obj).length; i++)
+  {
+    if(Array.isArray(Object.values(obj)[i]))
+    {
+      console.log(Object.values(obj)[i]);
+      numobj[Object.keys(obj)[i]]=Object.values(obj)[i]
+    }
+  }
+  return numobj;
+}
 
-
+console.log(onlyArray({firstName:"Moh",age:24,movies:[1,5,"string"]}));
+document.getElementById("t14").innerHTML=onlyArray({firstName:"Moh",age:24,movies:[1,5,"string"]});
 /*
 15
 Create a function called keysArray
@@ -264,3 +333,10 @@ Ex: keysArray({firstName:"Moh",age:24,movies:[1,5,"string"]})
 => ['firstName', 'age', 'movies']
 
 */
+console.log("//////////task15/////////////");
+function keysArray(object) {
+  let newob = Object.keys(object);
+  return newob;
+}
+console.log( keysArray({firstName:"Moh",age:24,movies:[1,5,"string"]}));
+document.getElementById

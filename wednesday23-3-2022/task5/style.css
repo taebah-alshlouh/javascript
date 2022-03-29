@@ -1,6 +1,28 @@
-.form{
+body{
+    box-sizing: border-box;
+    margin: 2%;
+    padding: 0%;
+    font-family: Helvetica, sans-serif;
+    background-color: aliceblue;
+    background-image: url("https://wallpaperaccess.com/full/1745604.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+.container{
     display: flex;
     align-items: center;
     width: 50%;
-    height: 30%;    
+    height: 50%; 
+    background-color: rgba(255, 255, 255, 0.678); 
+    margin-top: 15%;
+    margin-left: 25%;
+}
+.formStyle{
+    width: 100%;
+}
+label{
+    font-size: 1.5vw;
+    font-weight: 500;
 }
