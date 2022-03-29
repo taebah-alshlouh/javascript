@@ -15,10 +15,19 @@ function getPosts() {
 }
 
 function creatPost(post, callback) {
-    setTimeout(() => {
-        posts.push(post);
-        callback();
-    }, 2000);
+    return new Promise((resolve, reject)=>{
+        setTimeout(() => {
+            posts.push(post);
+           
+            const error=false;
+            if(!error){
+                resolve();
+            }
+            else{
+                return ('Error: something went wrong');
+            }
+        }, 2000);
+    });
 }
 getPosts();
-creatPost({ title: 'Post Three', body: 'this is post three' }, getPosts)
+creatPost({ title: 'Post Three', body: 'this is post three' }).then(getPosts).catch(err=>console.log(err));
