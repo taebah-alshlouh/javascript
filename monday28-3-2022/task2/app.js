@@ -18,7 +18,6 @@ function creatPost(post, callback) {
     return new Promise((resolve, reject)=>{
         setTimeout(() => {
             posts.push(post);
-           
             const error=false;
             if(!error){
                 resolve();

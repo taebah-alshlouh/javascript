@@ -465,11 +465,18 @@ Ex: repeatChar(string,"z") => 0
 */
 console.log("//////////exercise 19/////////////");
 
-function repeatChar(params) {
-   
+function repeatChar(str,char) {
+  let count=0;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i]==char)
+    count++;
+    
+  }
+  return count;
 }
 let string= "alex mercer madrasa rashed2 emad hala";
-repeatChar(string,"a");
+console.log(repeatChar(string,"a"));
+console.log(repeatChar(string,"z"));
 
 
 /*
