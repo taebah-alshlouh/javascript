@@ -2,22 +2,61 @@
     box-sizing: border-box;
 }
 
-
-.contaner{
-    width: 60%;
-    margin-left: 5%;
+body{
+display: flex;
 }
-
+.contaner{
+    width: 70%;
+    margin-top: 2%;
+    margin-left: 10%;
+}
+.con{
+border: 2% solid skyblue;
+}
 
 .divTable{
     margin-top: 1%;
-    border: 3px dashed darkblue;
-    width: 50%;
+    border: 3px solid rgb(0, 65, 139);
+    width: 100%;
 }
 #tableCon{
     font-size: larger;
-    color: darkcyan;
 }
 #headTa{
     padding: 1%;
 }
+
+th{
+    border: 1px solid rgb(0, 65, 139);;
+}
+fieldset{
+    border: 3px solid rgb(0, 65, 139);
+    border-radius: 2%;
+}
+legend{
+    margin-left: 15%;
+    font-size: x-large;
+    font-weight: 700;
+    color: rgb(84, 165, 197);
+}
+input{
+    width: 50%;
+}
+select{
+    width: 50%;
+}
+tr{
+    text-align: center;
+}
+td{
+    border: 2px solid rgb(0, 65, 139);
+    height: 20px;
+    width: 20vw;
+    color: rgb(7, 112, 112);}
+
+button{
+    margin-left:15% ;
+    width: 20%;
+border: 1px solid rgb(0, 65, 139);
+border-radius: 25%;
+    }
