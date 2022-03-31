@@ -12,17 +12,44 @@ body{
 
 .container{
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     align-items: center;
-    width: 50%;
-    height: 50%; 
+    width: 55%;
+    height: 55%; 
     background-color: rgba(255, 255, 255, 0.678); 
     margin-top: 15%;
-    margin-left: 25%;
+    margin-left: 20%;
+    border: 1px solid rgba(255, 255, 255, 0.678);
+    border-radius: 5%;
 }
 .formStyle{
     width: 100%;
+    margin:2% 2%;
+    color: rgb(120, 120, 120);
+    
 }
 label{
     font-size: 1.5vw;
     font-weight: 500;
+}
+ #sub{
+    width: 40%;
+    background-color: aliceblue;
+    color: darkgrey;
+    border: 1px solid darkgrey;
+    border-radius: 10%;
+    margin-left: 30%;
+    margin-bottom: 2%;
+}
+input{
+    width: 30%;
+    justify-items: center;
+}
+.err{
+    display: inline;
+    width: 40%;
+    margin-left: 2%;
+    color: tomato;
+    font-size: 1vw;
 }

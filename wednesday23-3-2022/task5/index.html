@@ -9,15 +9,21 @@
 </head>
 <body>
     <div class="container">
+
         <form action="" class="formStyle">
+
         <label for="pass">Password(min 6 characters): </label>
-        <input type="password" min="6" max="12" id="pass"> <div class="err"></div>
+        <input type="password" id="pass" placeholders="password" oninput="checkValidation();"> 
+        <div class="err" id="check1"></div>
         <br><br>
         <label for="re_pass">Repeat password: </label>
-        <input type="password" min="6" max="12" id="re_pass" onchange=""><div class="err"></div>
+        <input type="password"  id="re_pass" placeholders="password" oninput="checkValidation();"> 
+        <div class="err" id="check2"></div>
         <br><br>
-        <input type="submit" id="sub" style="display:hidden;">
-    </form>
+        <input type="submit" id="sub">
+
+        </form>
+
     </div>
     
 </body>
