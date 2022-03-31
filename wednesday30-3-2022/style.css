@@ -1,0 +1,44 @@
+body{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+.container{
+  width: 60%;
+  margin-top: 8%;
+  margin-left: 10%;
+  border: 2px solid slategray;
+}
+.container1{
+box-sizing: border-box;
+margin-left: 15%;
+margin-top: 5%;
+}
+#regestForm{
+    margin: 2% 5%;
+}
+input{
+    width: 50%;
+    border: 2px solid palevioletred;
+    margin-left: 2%;
+    box-align: center;
+    border: 2px solid palevioletred;
+    border-radius: 7%;
+    padding-left: 2%;
+}
+#sub{
+    background-color: palevioletred;
+    color: white;
+    border: 1px solid palevioletred;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 5%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 5%;
+    margin-left: 5%;
+}
+label{
+    color: purple;
+    font-size: larger;
+}
