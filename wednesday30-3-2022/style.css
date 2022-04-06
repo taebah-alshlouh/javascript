@@ -10,12 +10,13 @@ body{
     background-size: cover;
 }
 .container{
-  width: 60%;
+  width: 45%;
   margin-top: 8%;
-  margin-left: 10%;
+  margin-left: 22%;
   border: 2px solid rgba(255, 255, 255, 0.532);
-  border-radius: 2%;
+  border-radius: 15px;
   background-color: rgba(255, 255, 255, 0.532);
+  padding:1% 2% 0 2%;
 }
 .container1{
 box-sizing: border-box;
@@ -26,24 +27,26 @@ margin-top: 5%;
     margin: 2% 5%;
 }
 input{
-    width: 50%;
-    height: 4vh;
+    width: 70%;
+    height: 3.5vh;
     border: 2px solid palevioletred;
     margin-left: 2%;
     box-align: center;
     border: 2px solid palevioletred;
     border-radius: 7px;
     padding-left: 2%;
+    background-color: rgba(255, 255, 255, 0.388);
 }
 #sub{
-    background-color: palevioletred;
+    background-color: rgba(216, 112, 147, 0.616);
     color: white;
-    border: 1px solid palevioletred;
+    border: 1px solid rgba(216, 112, 147, 0.616);
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 5px;
     border-top-left-radius: 50px;
     border-top-right-radius: 5px;
-    margin-left: 5%;
+    margin-left:25%;
+    width: 50%;
 }
 label{
     color: purple;
