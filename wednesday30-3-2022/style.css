@@ -27,21 +27,22 @@ margin-top: 5%;
 }
 input{
     width: 50%;
+    height: 4vh;
     border: 2px solid palevioletred;
     margin-left: 2%;
     box-align: center;
     border: 2px solid palevioletred;
-    border-radius: 7%;
+    border-radius: 7px;
     padding-left: 2%;
 }
 #sub{
     background-color: palevioletred;
     color: white;
     border: 1px solid palevioletred;
-    border-bottom-right-radius: 50%;
-    border-bottom-left-radius: 5%;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 5%;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 5px;
     margin-left: 5%;
 }
 label{
