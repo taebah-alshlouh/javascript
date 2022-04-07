@@ -9,13 +9,12 @@ let emailError=document.getElementById('email-error');
 let passwordError=document.getElementById('password-error');
 let data=[];
 
-/*LocalStorage */
 function LocalStorageFrom(){
     let array=JSON.stringify(data);
     localStorage.setItem('Data',array);
 }
 
-/*Regestration Constructor */
+
 function regForm(fname,lname,bdate,femail,semail,password,spassword){
 
 this.fname=fname;
@@ -95,7 +94,7 @@ function checkPassword(password,spassword){
     let num=/[\d]{2,}/;
     let capital=/[A-Z]/;
     let symboles=/[#$@!%&*?]/;
-    
+
     if ((regex.test(password))&& (regex.test(spassword))){ 
         console.log('password syntax is Incorrect');
         passwordError.innerHTML= 'password syntax is Incorrect';
