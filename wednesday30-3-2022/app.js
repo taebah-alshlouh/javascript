@@ -29,16 +29,18 @@ this.correctDate=checkDate(this.bdate);
 this.correctEmail=correctEmail(this.femail,this.semail);
 this.correctPssword=checkPassword(this.password,this.spassword);
 console.log(this.fullName);
+
 data.push(this);
+
 renderInfo();
 LocalStorageFrom()
 }
 
-/*To return the full name */
+///////////first name and last name concat //////////////
 function userName(fname,lname){
     let x;
-    let regex = /[a-zA-Z\s]+$/;
-    if ((regex.test(fname)) && (regex.test(lname))){
+    let reg = /[a-zA-Z\s]+$/;
+    if ((reg.test(fname)) && (reg.test(lname))){
         console.log('correct');
         x = fname + ' '+ lname;
         return x;
@@ -49,7 +51,7 @@ function userName(fname,lname){
     }
 }
 
-/*To check from the date */
+///////////birthdate validation//////////////
 function checkDate(date)
 {
  let regex=/(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/;
@@ -63,7 +65,7 @@ function checkDate(date)
  }
 }
 
-/*To check from the email */
+///////////email validation//////////////
 function correctEmail(femail,semail){
     let regex=/(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -86,7 +88,7 @@ if ((!regex.test(femail)) && (!regex.test(semail)))
     }   
   }
 
-/*To check from password */
+///////////password validation//////////////
 function checkPassword(password,spassword){
 
 
