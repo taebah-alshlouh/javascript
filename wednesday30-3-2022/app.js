@@ -15,18 +15,18 @@ function LocalStorageFrom(){
 }
 
 
-function regForm(fname,lname,bdate,femail,semail,password,spassword){
+function regForm(fname,lname,bdate,femail,email2,password,spassword){
 
 this.fname=fname;
 this.lname=lname;
 this.femail=femail;
-this.semail=semail;
+this.email2=email2;
 this.bdate=bdate;
 this.password=password;
 this.spassword=spassword;
 this.fullName=userName(this.fname,this.lname);
 this.correctDate=checkDate(this.bdate);
-this.correctEmail=correctEmail(this.femail,this.semail);
+this.correctEmail=correctEmail(this.femail,this.email2);
 this.correctPssword=checkPassword(this.password,this.spassword);
 console.log(this.fullName);
 
@@ -66,16 +66,16 @@ function checkDate(date)
 }
 
 ///////////email validation//////////////
-function correctEmail(femail,semail){
+function correctEmail(femail,email2){
     let regex=/(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-if ((!regex.test(femail)) && (!regex.test(semail)))
+if ((!regex.test(femail)) && (!regex.test(email2)))
     {
       emailError.innerHTML= 'Incorrect Email!';
       return  'Incorrect Email!';
     }
     else{
-        if (femail==semail){
+        if (femail==email2){
              console.log('Email has been confirmed');
              emailError.innerHTML='Email has been confirmed';
              return 'Email has been confirmed';
@@ -89,7 +89,7 @@ if ((!regex.test(femail)) && (!regex.test(semail)))
   }
 
 ///////////password validation//////////////
-function checkPassword(password,spassword){
+function checkPassword(password,repassword){
 
 
     let regex=/^(?=.*[a-z])(?=.*[A-Z])(?=(.*[\d]){2,})[A-Za-z\d?]{8,32}$/;
@@ -97,24 +97,24 @@ function checkPassword(password,spassword){
     let capital=/[A-Z]/;
     let symboles=/[#$@!%&*?]/;
 
-    if ((regex.test(password))&& (regex.test(spassword))){ 
+    if ((regex.test(password))&& (regex.test(repassword))){ 
         console.log('password syntax is Incorrect');
         passwordError.innerHTML= 'password syntax is Incorrect';
         
     }
-    else if((!capital.test(password[0])) && (!capital.test(spassword[0]))){ 
+    else if((!capital.test(password[0])) && (!capital.test(repassword[0]))){ 
         console.log( 'Incorrect! first name must be capital.');
         passwordError.innerHTML= 'Incorrect! first name must be capital.';
     }
-    else if((!num.test(password))&&(!num.test(spassword))){
+    else if((!num.test(password))&&(!num.test(repassword))){
         console.log('You password must contain 2 numbers at least');
         passwordError.innerHTML= 'You password must contain 2 numbers at least';
     }
-    else if((!symboles.test(password)) && !symboles.test(spassword)){
+    else if((!symboles.test(password)) && !symboles.test(repassword)){
         console.log('You password must contain  at least 1 character');
         passwordError.innerHTML= 'You password must contain  at least 1 character';
     }
-    else if((password===spassword) &&(password.length>=8 && password.length<=32) &&(spassword.length>=8 && spassword.length<=32)){
+    else if((password===repassword) &&(password.length>=8 && password.length<=32) &&(repassword.length>=8 && repassword.length<=32)){
         console.log('password syntax is correct');
         console.log('The first name is capital');
         console.log( 'Passwords match');
@@ -130,11 +130,11 @@ function handelSubmit(e){
     let fname=e.target.fname.value;
     let lname=e.target.lname.value;
     let bdate=e.target.bdate.value;
-    let femail=e.target.femail.value;
-    let semail=e.target.semail.value;
+    let email=e.target.email.value;
+    let email2=e.target.email2.value;
     let password=e.target.password.value;
-    let spassword=e.target.spassword.value;
-    new regForm(fname,lname,bdate,femail,semail,password,spassword); 
+    let repassword=e.target.repassword.value;
+    new regForm(fname,lname,bdate,email,email2,password,repassword); 
 }
 handelSubmit();
 function renderInfo(){
