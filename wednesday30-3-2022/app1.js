@@ -11,6 +11,6 @@ GetDataFromLStorage()
 
 function renderData(conData){
     conData.map(function(i){
-    result.innerHTML= `I'm  ${i},  my birth date is ${i.bdate}`;///the full name and the birthdate
+        show.innerHTML= `I'm  ${i.fName},  my birth date is ${i.bdate}`;///the full name and the birthdate
     })
 }

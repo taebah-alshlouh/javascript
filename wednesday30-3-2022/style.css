@@ -52,3 +52,19 @@ label{
     color: purple;
     font-size: larger;
 }
+#welcoming{
+    background-color: rgba(216, 112, 147, 0.616);
+    color: white;
+    border: 1px solid rgba(216, 112, 147, 0.616);
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 5px;
+    margin-left:25%;
+    width: 50%;
+    margin-top: 1%;
+}
+a{
+   color: white;
+    text-decoration: none;
+}
