@@ -5,36 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>regestration form</title>
+    <title>Regestration form</title>
 </head>
 <body>
-    <div class="container">
-    <form action="" id="regestForm" >
-        <label for="f_name">first name:</label>
-        <input type="text" name="fname" id="f_name" ><span id="fname-error"></span><br><br>
+    
+    <section>
+        <form>
+            <fieldset>
+                <legend>Resgisteration Form</legend>
 
-        <label for="L_name">last name:</label>
-        <input type="text" name="lname" id="L_name"><br><br>
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" onchange="fnameFun()"> <span id="fname_span"></span>
+                <br>
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" onchange="lnameFun()"> <span id="lname_span"></span>
+                <br>
+                <label for="bdate">Birth Date</label>
+                <input type="date" id="bdate" onchange="dateFun()"> <span id="date_span"></span>
+                <br>
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="email@addres.com" onchange="emailFun()"> <span id="email_span"></span>
+                <br>
+                <label for="email_conf">Confirm Email</label>
+                <input type="email" id="email_conf" onchange="confEmailFun()"> <span id="email_conf_span"></span>
+                <br>
+                <label for="pass">Password</label>
+                <input type="password" id="pass" onchange="passwordFun()"> <span id="password_span"></span>
+                <div class="list">
+                    <span><li id="li1"></li></span>
+                    <span><li id="li2"></li></span>
+                    <span><li id="li3"></li></span>
+                    <span><li id="li4"></li></span>
+                </div>
+                <br>
+                <label for="pass_conf">Confirm Password</label>
+                <input type="password" id="pass_conf" onchange="confPasswordFun()"> <span id="password_conf_span"></span>
+                <br>
+                <input type="button" id="btn" value="Submit" onclick="submition()">
+            </fieldset>
+        </form>
+    </section>
 
-        <label for="bdate">birth date:</label>
-        <input type="date" name="bdate" id="bdate" > <span id="bdate-error"></span><br><br>
-
-        <label for="email">email:</label>
-        <input type="email" name="email" id="email"><br><br>
-
-        <label for="email2">re-enter email:</label>
-        <input type="email" name="email2" id="email2"> <span id="password-error"></span><br><br>
-
-        <label for="password1">password:</label>
-        <input type="password" name="password" id="password1"  autocomplete="new-password" ><br><br>
-
-        <label for="password2">re-enter password:</label>
-        <input type="password" name="repassword" id="password2" autocomplete="new-password" ><br><br>
-
-         <button type="submit" id="sub">submit</button>
-         <button id="welcoming"><a href="index2.html" >Welcome </a></button>
-    </form>
-   </div>
 </body>
 <script src="app.js"></script>
 </html>

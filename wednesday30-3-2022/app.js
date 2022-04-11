@@ -1,141 +1,138 @@
-"use strict";
-let reForm=document.getElementById('regestForm');
-let firstName=document.getElementById('f_name');
-let nameError=document.getElementById('fname-error');
-let lastName=document.getElementById('L_name');
-let lastNameError=document.getElementById('sname-error');
-let birthdateError=document.getElementById('bdate-error');
-let emailError=document.getElementById('email-error');
-let passwordError=document.getElementById('password-error');
-let data=[];
+'use strict'
+let first_name= document.getElementById('fname').value;
+let last_name= document.getElementById('lname').value;
+let birth_date= document.getElementById('bdate').value;
+let email_= document.getElementById('email').value;
+let password= document.getElementById('pass').value;
+let button= document.getElementById('btn');
+let info=[];
 
-function LocalStorageFrom(){
-    let array=JSON.stringify(data);
-    localStorage.setItem('Data',array);
-}
-
-
-function regForm(fname,lname,bdate,femail,email2,password,spassword){
-
-this.fname=fname;
-this.lname=lname;
-this.femail=femail;
-this.email2=email2;
-this.bdate=bdate;
-this.password=password;
-this.spassword=spassword;
-this.fullName=userName(this.fname,this.lname);
-this.correctDate=checkDate(this.bdate);
-this.correctEmail=correctEmail(this.femail,this.email2);
-this.correctPssword=checkPassword(this.password,this.spassword);
-console.log(this.fullName);
-
-data.push(this);
-
-renderInfo();
-LocalStorageFrom()
-}
-
-///////////first name and last name concat //////////////
-function userName(fname,lname){
-    let x;
-    let reg = /[a-zA-Z\s]+$/;
-    if ((reg.test(fname)) && (reg.test(lname))){
-        console.log('correct');
-        x = fname + ' '+ lname;
-        return x;
-    }
-    else{
-        nameError.innerHTML='Incorrect name'
-        return 'Incorrect name';
-    }
-}
-
-///////////birthdate validation//////////////
-function checkDate(date)
-{
- let regex=/(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/;
- if(regex.test(date)){
-     console.log('correct date');
-     return date;
- }
- else{
-     console.log('inncorrect date');
-     emailError.innerHTML='inncorrect date';
- }
-}
-
-///////////email validation//////////////
-function correctEmail(femail,email2){
-    let regex=/(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-if ((!regex.test(femail)) && (!regex.test(email2)))
-    {
-      emailError.innerHTML= 'Incorrect Email!';
-      return  'Incorrect Email!';
-    }
-    else{
-        if (femail==email2){
-             console.log('Email has been confirmed');
-             emailError.innerHTML='Email has been confirmed';
-             return 'Email has been confirmed';
-        }
-        else{
-            console.log(`Emails don't match`);
-            emailError.innerHTML=`Emails don't match`;
-            return `Emails don't match`;
-        }
-    }   
-  }
-
-///////////password validation//////////////
-function checkPassword(password,repassword){
-
-
-    let regex=/^(?=.*[a-z])(?=.*[A-Z])(?=(.*[\d]){2,})[A-Za-z\d?]{8,32}$/;
-    let num=/[\d]{2,}/;
-    let capital=/[A-Z]/;
-    let symboles=/[#$@!%&*?]/;
-
-    if ((regex.test(password))&& (regex.test(repassword))){ 
-        console.log('password syntax is Incorrect');
-        passwordError.innerHTML= 'password syntax is Incorrect';
-        
-    }
-    else if((!capital.test(password[0])) && (!capital.test(repassword[0]))){ 
-        console.log( 'Incorrect! first name must be capital.');
-        passwordError.innerHTML= 'Incorrect! first name must be capital.';
-    }
-    else if((!num.test(password))&&(!num.test(repassword))){
-        console.log('You password must contain 2 numbers at least');
-        passwordError.innerHTML= 'You password must contain 2 numbers at least';
-    }
-    else if((!symboles.test(password)) && !symboles.test(repassword)){
-        console.log('You password must contain  at least 1 character');
-        passwordError.innerHTML= 'You password must contain  at least 1 character';
-    }
-    else if((password===repassword) &&(password.length>=8 && password.length<=32) &&(repassword.length>=8 && repassword.length<=32)){
-        console.log('password syntax is correct');
-        console.log('The first name is capital');
-        console.log( 'Passwords match');
+/////////////////////////
+function fnameFun(){
+    let first_name= document.getElementById('fname').value;
+    let fname_pattern= /[^a-z|^ ]/i;
+    let test1= first_name.search(fname_pattern);
+    if(test1 != -1 ){
+        document.getElementById('fname_span').innerHTML= "Inavlid name, your name should have only letters";
     }else{
-        console.log(`Passwords don't match or the length is more than 8 or less than 32`);
-       passwordError.innerHTML= `Passwords don't match or the length is incorrect (length must be more or equal than 8 and less than or equal 32`;
+        document.getElementById('fname_span').innerHTML= "";
+        info.push(first_name);
+    }
+}
+/////////////////////////
+function lnameFun(){
+    let last_name= document.getElementById('lname').value;
+    let lname_pattern= /[^a-z|^ ]/i;
+    let test2= last_name.search(lname_pattern);
+    if(test2 != -1 ){
+        document.getElementById('lname_span').innerHTML= "Inavlid name, your name should have only letters";
+    }else{
+        document.getElementById('lname_span').innerHTML= "";
+        info.push(last_name);
+    }
+}
+////////////////////////
+function dateFun(){
+    let birth_date= document.getElementById('bdate').value;
+    let date_pattern= /^\d{4}-\d{2}-\d{2}$/;
+    let test3= birth_date.search(date_pattern);
+    if(test3 == -1){
+        document.getElementById('date_span').innerHTML= "Invalid Date";
+    }else{
+        document.getElementById('date_span').innerHTML= "";
+    }
+}
+////////////////////////
+function emailFun(){
+    let email_= document.getElementById('email').value;
+    console.log(email_);
+    let email_pattern1= /^[a-z | 0-9]/i;
+    let email_pattern2= /@/;
+    let email_pattern3= /[a-z].com$/i;
+    let test4_= email_.search(email_pattern1);
+    let test4__= email_.search(email_pattern2);
+    let test4= email_.search(email_pattern3);
+    if(test4_ == -1){
+        document.getElementById('email_span').innerHTML= "Invalid Email, the email should be like that: test@addres.com";
+    }else if(test4__ == -1){
+        document.getElementById('email_span').innerHTML= "Invalid Email the email should be like that: test@addres.com";
+    }else if(test4 == -1){
+        document.getElementById('email_span').innerHTML= "Invalid Email the email should be like that: test@addres.com";
+    }else{
+        document.getElementById('email_span').innerHTML= "";
+        info.push(email_);
     }
 }
 
-reForm.addEventListener('submit', handelSubmit);
-function handelSubmit(e){
-    e.preventDefault();
-    let fname=e.target.fname.value;
-    let lname=e.target.lname.value;
-    let bdate=e.target.bdate.value;
-    let email=e.target.email.value;
-    let email2=e.target.email2.value;
-    let password=e.target.password.value;
-    let repassword=e.target.repassword.value;
-    new regForm(fname,lname,bdate,email,email2,password,repassword); 
+///////////////////////
+function confEmailFun(){
+    let email_= document.getElementById('email').value;
+    let email_conf= document.getElementById('email_conf').value;
+    if (email_ == email_conf){
+        document.getElementById('email_conf_span').innerHTML= "";
+    }else{
+        document.getElementById('email_conf_span').innerHTML= "It Doesn't Match the Email you Entered";
+    }
 }
-handelSubmit();
-function renderInfo(){
+///////////////////////
+function passwordFun(){
+    let password= document.getElementById('pass').value;
+    let pass_pattern1= /^[A-Z]/;
+    let pass_pattern2= /\d/g;
+    let pass_pattern3= /[^a-z|^0-9]/i;
+    let test5= password.search(pass_pattern1);
+    let test6= password.match(pass_pattern2);
+    let test7= password.search(pass_pattern3);
+    if( test5 == -1 || test6 == null || test6.length < 2 || test7 == -1 || (password.length < 8 || password.length > 32)){
+        document.getElementById('password_span').innerHTML= "Invalid Password";
+    }else{
+        document.getElementById('password_span').innerHTML= ""; 
+    }
+    if(test5 == -1){
+        document.getElementById('li1').style.display='block';
+        document.getElementById('li1').innerHTML= "Your password should start with capital letter";
+    }else{
+        document.getElementById('li1').style.display='none';
+        document.getElementById('li1').innerHTML= ""; 
+    }
+    if(test6 == null || test6.length < 2){
+        document.getElementById('li2').style.display='block';
+        document.getElementById('li2').innerHTML= "Your password should have at least 2 numbers";
+    }else{
+        document.getElementById('li2').style.display='none';
+        document.getElementById('li2').innerHTML= ""; 
+    }
+    if(test7 == -1){
+        document.getElementById('li3').style.display='block';
+        document.getElementById('li3').innerHTML= "Your password should have at least 1 special character";
+    }else{
+        document.getElementById('li3').style.display='none';
+        document.getElementById('li3').innerHTML= ""; 
+    }
+    if(password.length < 8 || password.length > 32){
+        document.getElementById('li4').style.display='block';
+        document.getElementById('li4').innerHTML= "Your password length should be between 8 and 32";
+    }else{
+        document.getElementById('li4').style.display='none';
+        document.getElementById('li4').innerHTML= ""; 
+    }
+}
+/////////////////////////////
+function confPasswordFun(){
+    let password= document.getElementById('pass').value;
+    let password_conf= document.getElementById('pass_conf').value;
+    if (password == password_conf){
+        document.getElementById('password_conf_span').innerHTML= "";
+    }else{
+        document.getElementById('password_conf_span').innerHTML= "The two passwords doesn't match";
+    }
+}
+////////////////////////////
+console.log(info);
+
+////////////////////////////
+function submition(){
+let infoArr= JSON.stringify(info);
+localStorage.setItem('information', infoArr);
+window.location= "index2.html";
 }
